@@ -8,10 +8,15 @@ const scontoOver = prezzoBiglietto * 40 / 100;
 
 if (età <= 21) {
     sconti = prezzoBiglietto - scontoMinorenni;
+    document.getElementById("sconto-20").innerHTML = "SCONTO 20%";
 } else if (età >= 65) {
     sconti = prezzoBiglietto - scontoOver;
+    document.getElementById("sconto-40").innerHTML = "SCONTO 40%";
+} else {
+    prezzoBiglietto
 }
 
 document.getElementById("km-percorsi").innerHTML = kmPercorsi;
 document.getElementById("anni").innerHTML = età;
 document.getElementById("prezzo-biglietto").innerHTML = Number(sconti).toFixed(2);
+document.getElementById("prezzo-biglietto").innerHTML = Number(prezzoBiglietto).toFixed(2);
